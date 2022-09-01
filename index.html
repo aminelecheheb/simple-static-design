@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>project</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<section class="landing">
+				<div class="proto-container">
+					<div class="proto"></div>
+					<div class="proto"></div>
+					<div class="proto"></div>
+					<div class="proto"></div>
+				</div>
+				<img src="first.svg" alt="first" />
+				<div class="content">
+					<h1>hey, <span>let's create something new </span></h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quaerat alias ipsam, tempore placeat in accusantium
+						vitae ut pariatur voluptates similique laboriosam assumenda .
+					</p>
+					<button class="fill">Hire me</button>
+				</div>
+			</section>
+			<section class="about">
+				<img src="three.svg" alt="" />
+				<div class="content">
+					<h1>About me</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+						accusamus placeat adipisci ipsa nostrum itaque praesentium
+						reiciendis sint nesciunt recusandae aut, fugiat amet, optio quisquam
+						numquam maiores, iusto impedit unde.
+					</p>
+					<div class="skills">
+						<h3>Some of my skills</h3>
+						<div class="skill">HTML5</div>
+						<div class="skill">CSS3</div>
+						<div class="skill">BS4</div>
+						<div class="skill">SASS</div>
+						<div class="skill">JS</div>
+						<div class="skill">GSAP</div>
+						<div class="skill">ADOBE XD</div>
+						<div class="skill">FIGMA</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script>
+			let landing = document.querySelector(".landing");
+			let content = document.querySelector(".content");
+			let protos = document.querySelectorAll(".proto");
+			landing.addEventListener("mousemove", (event) => {
+				let move = event.clientX * 0.05 + 4;
+				let move2 = event.clientX * 0.004;
+
+				content.style.transform = `translateX(-${move2}%)`;
+				protos.forEach((proto) => {
+					proto.style.transform = `translateX(${move}%)`;
+				});
+			});
+		</script>
+	</body>
+</html>
